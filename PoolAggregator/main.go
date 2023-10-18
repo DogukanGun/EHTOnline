@@ -1,60 +1,34 @@
 package main
 
 import (
-	"PoolAggregator/uniswap"
 	"fmt"
 	"github.com/ethereum/go-ethereum/ethclient"
 	"github.com/joho/godotenv"
 	"log"
 	"os"
-	"strconv"
 )
 
-func main() {
+func StartAggregator(token0 string, token1 string) {
 
 	if len(os.Args) < 3 {
 		fmt.Println("Please provide at least two arguments.")
 		return
 	}
 
-	// Access the first and second arguments.
-	token0 := os.Getenv("token0")
-	token1 := os.Getenv("token1")
 	envNames := []string{"ETH_URL"}
 	status, _, envMap := InitializeENV(envNames, ".env")
 	if !status {
 		fmt.Println("Error in env")
 		os.Exit(1)
 	}
-	client, err := ethclient.Dial(envMap["ETH_URL"])
+	_, err := ethclient.Dial(envMap["ETH_URL"])
 
 	if err != nil {
 		fmt.Println(fmt.Sprintf("Error in client connection: %s", err))
 		os.Exit(1)
 	}
-	price, _, _, err := uniswap.UniswapV3PriceOracle(token0, token1, []int64{500, 3000, 5000}, client)
-	if err != nil {
-		fmt.Println(fmt.Sprintf("Error in price calculation: %s", err))
-		os.Exit(1)
-	}
 
-	priceForToken0Str := os.Getenv("token0Price")
-	priceForToken1Str := os.Getenv("token1Price")
-	priceForToken0 := float64(0)
-	priceForToken1 := float64(0)
-	if s, err := strconv.ParseFloat(priceForToken0Str, 64); err == nil {
-		priceForToken0 = s // 3.1415927410125732
-	}
-	if s, err := strconv.ParseFloat(priceForToken1Str, 64); err == nil {
-		priceForToken1 = s // 3.1415927410125732
-	}
-	priceFromPool := (price * priceForToken0) - priceForToken1
-	if priceForToken0 < priceFromPool {
-		fmt.Println(fmt.Sprintf("Oppurtinaty to sell %s", token0))
-	} else {
-		fmt.Println(fmt.Sprintf("Oppurtinaty to buy %s", token0))
-	}
-	fmt.Println(fmt.Sprintf("%.7f", (priceFromPool-priceForToken0)/100))
+	//TODO compare price of uniswap and binance
 }
 
 // Function to initialize the variables
