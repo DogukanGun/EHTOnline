@@ -1,6 +1,8 @@
 package router
 
 import (
+	"PoolAggregator/controller/dex"
+	"PoolAggregator/controller/oracle"
 	"encoding/gob"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
@@ -19,7 +21,8 @@ func New() *gin.Engine {
 		MaxAge:           12 * time.Hour,
 	}))
 
-	router.GET("/dex/:token0/:token1")
+	router.GET("/dex/:token0/:token1", dex.Handler())
+	router.GET("/price/:token", oracleController.Handler())
 
 	gob.Register(map[string]interface{}{})
 
