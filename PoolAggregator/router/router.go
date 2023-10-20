@@ -21,7 +21,7 @@ func New() *gin.Engine {
 		MaxAge:           12 * time.Hour,
 	}))
 
-	router.GET("/dex/:token0/:token1", dex.Handler())
+	router.GET("/dex/:token", dex.Handler())
 	router.GET("/price/:token", oracleController.Handler())
 
 	gob.Register(map[string]interface{}{})

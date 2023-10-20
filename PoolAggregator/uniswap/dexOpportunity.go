@@ -34,7 +34,7 @@ func DexOpportunity(token0 string, token1 string) (res response.UniswapPriceResp
 		os.Exit(1)
 	}
 	responseForToken0 := oracle.ChainlinkETHUSDOracle(token0, client)
-	responseForToken1 := oracle.ChainlinkETHUSDOracle(token0, client)
+	responseForToken1 := oracle.ChainlinkETHUSDOracle(token1, client)
 	priceForToken0 := responseForToken0.Price
 	priceForToken1 := responseForToken1.Price
 	priceFromPool := (price * priceForToken0) - priceForToken1

@@ -42,7 +42,6 @@ func UniswapV3PriceOracle(tokenAddress string, baseToken string, feeArr []int64,
 
 		// Initialzie the V3Pool Instance
 		v3Pool, err = poolV3.NewUniswapPoolV3Caller(currentAddress, client)
-
 		if err != nil {
 			continue
 		}
