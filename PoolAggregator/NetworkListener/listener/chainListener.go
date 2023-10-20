@@ -1,6 +1,7 @@
 package listener
 
 import (
+	"PoolAggregator/NetworkListener/yield"
 	"context"
 	"github.com/ethereum/go-ethereum"
 	"github.com/ethereum/go-ethereum/common"
@@ -35,7 +36,7 @@ func (c *NetworkListener) listenNetwork() {
 			log.Fatal(err)
 		case vLog := <-logs:
 			if vLog.Topics[0] == common.HexToHash("0xe633b43bc0097e50fdbee62a7bb46bfeaeb94cb9ed08f0e549a8160fa1d197f9") {
-
+				yield.StartYieldAggregator()
 			}
 		}
 	}

@@ -1,6 +1,7 @@
 package uniswap
 
 import (
+	"PoolAggregator/data"
 	"PoolAggregator/uniswap/factoryV3"
 	"PoolAggregator/uniswap/oracle"
 	"PoolAggregator/uniswap/poolV3"
@@ -10,7 +11,7 @@ import (
 	"math/big"
 )
 
-func GetUniswapYield(token0 string, token1 string, client *ethclient.Client) *big.Int {
+func GetUniswapYield(token0 string, token1 string, client *ethclient.Client) data.YieldCalculation {
 	v3Factory, _ := factoryV3.NewUniswapFactoryV3(common.HexToAddress("0x1F98431c8aD98523631AE4a59f267346ea31F984"),
 		client)
 	currentAddress, _ := v3Factory.GetPool(nil, common.HexToAddress(token0), common.HexToAddress(token1),
@@ -20,7 +21,7 @@ func GetUniswapYield(token0 string, token1 string, client *ethclient.Client) *bi
 	position, err := v3Pool.Positions(nil, temp)
 	if err != nil {
 		fmt.Println(err)
-		return big.NewInt(0)
+		return data.YieldCalculation{}
 	}
 	feesEarned := calculateFeesEarned(
 		position.FeeGrowthInside0LastX128,
@@ -31,13 +32,18 @@ func GetUniswapYield(token0 string, token1 string, client *ethclient.Client) *bi
 		position.TokensOwed1,
 	)
 	price := oracle.ChainlinkETHUSDOracle(token0, client)
-	return getCalculationYield(
+	yield := getCalculationYield(
 		position.Liquidity,
 		position.TokensOwed0,
 		big.NewInt(int64(int(price.Price))),
 		position.TokensOwed1,
 		feesEarned,
 	)
+	return data.YieldCalculation{
+		YieldValue:  yield,
+		PoolAddress: currentAddress.String(),
+		ChainName:   "goerli",
+	}
 }
 
 func calculateFeesEarned(FeeGrowthInside0LastX128 *big.Int, FeeGrowthInside0PriorX128 *big.Int, TokensOwed0 *big.Int, FeeGrowthInside1LastX128 *big.Int, FeeGrowthInside1PriorX128 *big.Int, TokensOwed1 *big.Int) *big.Int {
