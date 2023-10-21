@@ -1,6 +1,7 @@
 package uniswap
 
 import (
+	"PoolAggregator/uniswap/ChainlinkAggregator"
 	"PoolAggregator/uniswap/erc20"
 	"PoolAggregator/uniswap/factoryV3"
 	"PoolAggregator/uniswap/poolV3"
@@ -12,7 +13,7 @@ import (
 	"strings"
 )
 
-func UniswapV3PriceOracle(tokenAddress string, baseToken string, feeArr []int64, client *ethclient.Client) (price float64, selectedFee int64, tokenDecimal uint8, err error) {
+func UniswapV3PriceOracle(tokenAddress string, baseToken string, feeArr []int64, client *ethclient.Client) (price float64, address string, poolAssets string, err error) {
 
 	// Initialize the factory instance
 	v3Factory, err := factoryV3.NewUniswapFactoryV3(common.HexToAddress("0x1F98431c8aD98523631AE4a59f267346ea31F984"),
@@ -22,13 +23,12 @@ func UniswapV3PriceOracle(tokenAddress string, baseToken string, feeArr []int64,
 		return
 	}
 
+	poolAssets = ChainlinkAggregator.CHAINLINK_ETH_PRICE_FEEDS[baseToken] + "/" + ChainlinkAggregator.CHAINLINK_ETH_PRICE_FEEDS[tokenAddress]
 	// Get the corresponding pool
 	poolAddress := common.HexToAddress("0x0000000000000000000000000000000000000000")
 	previousLiq := big.NewInt(0)
 	currentAddress := common.HexToAddress("0x0000000000000000000000000000000000000000")
 	v3Pool := &poolV3.UniswapPoolV3Caller{}
-	selectedFee = 0
-
 	// Pick the pool with the higest liquidity
 	for _, fee := range feeArr {
 		currentLiq := big.NewInt(0)
@@ -55,7 +55,7 @@ func UniswapV3PriceOracle(tokenAddress string, baseToken string, feeArr []int64,
 		if 1 == currentLiq.Cmp(previousLiq) {
 			previousLiq.Set(currentLiq)
 			poolAddress.SetBytes(currentAddress.Bytes())
-			selectedFee = fee
+
 		}
 
 	}
@@ -119,7 +119,6 @@ func UniswapV3PriceOracle(tokenAddress string, baseToken string, feeArr []int64,
 	}
 
 	token1decimals, err := token1instance.Decimals(nil)
-	tokenDecimal = token1decimals
 
 	if err != nil {
 		return
@@ -132,10 +131,10 @@ func UniswapV3PriceOracle(tokenAddress string, baseToken string, feeArr []int64,
 	if strings.ToLower(token1Address.String()) != strings.ToLower(tokenAddress) {
 		preliminaryResult = 1 / preliminaryResult
 		multiplier = math.Pow(10, decimalDiff)
-		tokenDecimal = token0decimals
 	}
 
 	// Finalize the result
+	address = poolAddress.String()
 	price = (1 / preliminaryResult) * multiplier
 	return
 

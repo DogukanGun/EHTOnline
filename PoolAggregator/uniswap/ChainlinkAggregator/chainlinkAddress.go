@@ -18,16 +18,8 @@ var CHAINLINK_ETH_PRICE_FEEDS = map[string]string{
 	strings.ToLower("0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0"): strings.ToLower("0x7bac85a8a13a4bcd8abb3eb7d6b4d632c5a57676"),
 	// WBNB
 	strings.ToLower("0x418D75f65a02b3D53B2418FB8E1fe493759c7605"): strings.ToLower("0x14e613ac84a31f709eadbdf89c6cc390fdc9540a"),
-	// YFI
-	strings.ToLower("0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e"): strings.ToLower("0xa027702dbb89fbd58938e4324ac03b58d812b0e1"),
-	// COMP
-	strings.ToLower("0xc00e94cb662c3520282e6f5717214004a7f26888"): strings.ToLower("0xdbd020caef83efd542f4de03e3cf0c28a4428bd5"),
-	// MKR
-	strings.ToLower("0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2"): strings.ToLower("0xec1d1b3b0443256cc3860e24a46f108e699484aa"),
 	// SNX
 	strings.ToLower("0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f"): strings.ToLower("0xdc3ea94cd0ac27d9a86c180091e7f78c683d3699"),
-	// SUSHI
-	strings.ToLower("0x6b3595068778dd592e39a122f4f5a5cf09c90fe2"): strings.ToLower("0xcc70f09a6cc17553b2e31954cd36e4a2d89501f7"),
 	// 1INCH
 	strings.ToLower("0x111111111117dc0aa78b770fa6a738034120c302"): strings.ToLower("0xc929ad75b72593967de83e7f7cda0493458261d9"),
 	// CRV
@@ -36,102 +28,8 @@ var CHAINLINK_ETH_PRICE_FEEDS = map[string]string{
 	strings.ToLower("0xD31a59c85aE9D8edEFeC411D448f90841571b89c"): strings.ToLower("0x4ffc43a60e009b551865a93d232e33fce9f01507"),
 	// stETH
 	strings.ToLower("0xae7ab96520de3a18e5e111b5eaab095312d7fe84"): strings.ToLower("0xcfe54b5cd566ab89272946f602d76ea879cab4a8"),
-	// FXS
-	strings.ToLower("0x3432b6a60d23ca0dfca7761b7ab56459d9c964d0"): strings.ToLower("0x6ebc52c8c1089be9eb3945c4350b68b8e4c2233f"),
-	// KNC
-	strings.ToLower("0xdeFA4e8a7bcBA345F687a2f1456F5Edd9CE97202"): strings.ToLower("0xf8ff43e991a81e6ec886a3d281a2c6cc19ae70fc"),
-	// BNT
-	strings.ToLower("0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c"): strings.ToLower("0x1e6cf0d433de4fe882a437abc654f58e1e78548c"),
-	// ADX
-	strings.ToLower("0xade00c28244d5ce17d72e40330b1c318cd12b7c3"): strings.ToLower("0x231e764b44b2c1b7ca171fa8021a24ed520cde10"),
-	// AMPL
-	strings.ToLower("0xd46ba6d942050d489dbd938a2c909a5d5039a161"): strings.ToLower("0xe20ca8d7546932360e37e9d72c1a47334af57706"),
-	// BADGER
-	strings.ToLower("0x3472a5a71965499acd81997a54bba8d852c6e53d"): strings.ToLower("0x66a47b7206130e6ff64854ef0e1edfa237e65339"),
-	// BAL
-	strings.ToLower("0xba100000625a3754423978a60c9317c58a424e3D"): strings.ToLower("0xdf2917806e30300537aeb49a7663062f4d1f2b5f"),
-	// CAKE
-	strings.ToLower("0x152649eA73beAb28c5b49B26eb48f7EAD6d4c898"): strings.ToLower("0xeb0adf5c06861d6c07174288ce4d0a8128164003"),
-	// EURt
-	strings.ToLower("0xc581b735a1688071a1746c968e0798d642ede491"): strings.ToLower("0x01d391a48f4f7339ac64ca2c83a07c22f95f587a"),
-	// XSUSHI
-	strings.ToLower("0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272"): strings.ToLower("0xcc1f5d9e6956447630d703c8e93b2345c2de3d13"),
-	// TUSD
-	strings.ToLower("0x0000000000085d4780B73119b644AE5ecd22b376"): strings.ToLower("0xec746ecf986e2927abd291a2a1716c940100f8ba"),
-	// STG
-	strings.ToLower("0xaf5191b0de278c7286d6c7cc6ab6bb8a73ba2cd6"): strings.ToLower("0x7a9f34a0aa917d438e9b6e630067062b7f8f6f3d"),
-	// RSR
-	strings.ToLower("0x320623b8e4ff03373931769a31fc52a4e78b5d70"): strings.ToLower("0x759bbc1be8f90ee6457c44abc7d443842a976d02"),
-	// RPL
-	strings.ToLower("0xd33526068d116ce69f19a9ee46f0bd304f21a51f"): strings.ToLower("0x4e155ed98afe9034b7a5962f6c84c86d869daa9d"),
-	// PHALA
-	//strings.ToLower("0x6c5bA91642F10282b576d91922Ae6448C9d52f4E"): strings.ToLower("0x2b1248028fe48864c4f1c305e524e2e6702eafdf"),
-	// CVX
-	strings.ToLower("0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b"): strings.ToLower("0xd962fc30a72a84ce50161031391756bf2876af5d"),
-	// ENJ
-	strings.ToLower("0xF629cBd94d3791C9250152BD8dfBDF380E2a3B9c"): strings.ToLower("0x23905c55dc11d609d5d11dc604905779545de9a7"),
-	// FLOW
-	strings.ToLower("0xC6e64729931f60D2c8Bc70A27D66D9E0c28D1BF9"): strings.ToLower("0xd9bdd9f5ffa7d89c846a5e3231a093ae4b3469d2"),
-	// FOR
-	strings.ToLower("0x1fcdce58959f536621d76f5b7ffb955baa5a672f"): strings.ToLower("0x456834f736094fb0aad40a9bbc9d4a0f37818a54"),
-	// FORTH
-	//strings.ToLower("0x77fba179c79de5b7653f68b5039af940ada60ce0"): strings.ToLower("0x7d77fd73e468baece26852776beaf073cdc55fa0"),
-	// WHBAR
-	strings.ToLower("0x435FC409F14b2500A1E24C20516250Ad89341627"): strings.ToLower("0x38c5ae3ee324ee027d88c5117ee58d07c9b4699b"),
-	// HIGH
-	strings.ToLower("0x71Ab77b7dbB4fa7e017BC15090b2163221420282"): strings.ToLower("0xe2f95bc12fe8a3c35684be7586c39fd7c0e5b403"),
-	// IMX
-	strings.ToLower("0xf57e7e7c23978c3caec3c3548e3d615c346e79ff"): strings.ToLower("0xbaebefc1d023c0feccc047bff42e75f15ff213e6"),
-	// MANA
-	strings.ToLower("0x0f5d2fb29fb7d3cfee444a200298f468908cc942"): strings.ToLower("0x56a4857acbcfe3a66965c251628b1c9f1c408c19"),
-	// TRU
-	strings.ToLower("0x4c19596f5aaff459fa38b0f7ed92f11ae6543784"): strings.ToLower("0x26929b85fe284eeab939831002e1928183a10fb1"),
-	// WING
-	strings.ToLower("0xDb0f18081b505A7DE20B18ac41856BCB4Ba86A1a"): strings.ToLower("0x134fe0a225fb8e6683617c13ceb6b3319fb4fb82"),
-	// XCN
-	strings.ToLower("0xA2cd3D43c775978A96BdBf12d733D5A1ED94fb18"): strings.ToLower("0xeb988b77b94c186053282bfcd8b7ed55142d3cab"),
-	// ZRX
-	strings.ToLower("0xe41d2489571d322189246dafa5ebde1f4699f498"): strings.ToLower("0x2885d15b8af22648b98b122b22fdf4d2a56c6023"),
-	// ALCX
-	//strings.ToLower("0xdbdb4d16eda451d0503b854cf79d55697f90c8df"): strings.ToLower("0xc355e4c0b3ff4ed0b49eaacd55fe29b311f42976"),
-	// ANKR
-	strings.ToLower("0x8290333cef9e6d528dd5618fb97a76f268f3edd4"): strings.ToLower("0x7eed379bf00005cfed29fed4009669de9bcc21ce"),
-	// APE
-	strings.ToLower("0x4d224452801aced8b2f0aebe155379bb5d594381"): strings.ToLower("0xd10abbc76679a20055e167bb80a24ac851b37056"),
-	// BIT
-	//strings.ToLower("0x1A4b46696b2bB4794Eb3D4c26f1c55F9170fa4C5"): strings.ToLower("0x7b33ebfa52f215a30fad5a71b3fee57a4831f1f0"),
-
-	// CRO
-	//strings.ToLower("0xa0b73e1ff0b80914ab6fe0444e65848c4c34450b"): strings.ToLower("0x00cb80cf097d9aa9a3779ad8ee7cf98437eae050"),
-	// FOX
-	//strings.ToLower("0xc770eefad204b5180df6a14ee197d99d808ee52d"): strings.ToLower("0xcca02ffeface21325befd6616cb4ba5fcb047480"),
-	// NEAR
-	//strings.ToLower("0x85F17Cf997934a597031b2E18a9aB6ebD4B9f6a4"): strings.ToLower("0xc12a6d1d827e23318266ef16ba6f397f2f91da9b"),
-	// NMR
-	strings.ToLower("0x1776e1F26f98b1A5dF9cD347953a26dd3Cb46671"): strings.ToLower("0xcc445b35b3636bc7cc7051f4769d8982ed0d449a"),
-	// OMG
-	strings.ToLower("0xd26114cd6ee289accf82350c8d8487fedb8a0c07"): strings.ToLower("0x7d476f061f8212a8c9317d5784e72b4212436e93"),
-	// ONT
-	strings.ToLower("0xcb46C550539ac3DB72dc7aF7c89B11c306C727c2"): strings.ToLower("0xcda3708c5c2907fcca52bb3f9d3e4c2028b89319"),
-	// OXT
-	strings.ToLower("0x4575f41308EC1483f3d399aa9a2826d74Da13Deb"): strings.ToLower("0xd75aaae4af0c398ca13e2667be57af2cca8b5de6"),
-	// SAND
-	strings.ToLower("0x3845badAde8e6dFF049820680d1F14bD3903a5d0"): strings.ToLower("0x35e3f7e558c04ce7eee1629258ecbba03b36ec56"),
-	// SPELL
-	strings.ToLower("0x090185f2135308bad17527004364ebcc2d37e5f6"): strings.ToLower("0x8c110b94c5f1d347facf5e1e938ab2db60e3c9a8"),
-	// SPX
-	strings.ToLower("0x8CE9137d39326AD0cD6491fb5CC0CbA0e089b6A9"): strings.ToLower("0xfb0cfd6c19e25db4a08d8a204a387cea48cc138f"),
-	// TOMO
-	strings.ToLower("0x05D3606d5c81EB9b7B18530995eC9B29da05FaBa"): strings.ToLower("0x3d44925a8e9f9dfd90390e58e92ec16c996a331b"),
-
 	// DAI
 	strings.ToLower("0x6b175474e89094c44da98b954eedeac495271d0f"): strings.ToLower("0xAed0c38402a5d19df6E4c03F4E2DceD6e29c1ee9"),
-	// GHO
-	strings.ToLower("0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f"): strings.ToLower("0x3f12643D3f6f874d39C2a4c9f2Cd6f2DbAC877FC"),
-	// GRT
-	strings.ToLower("0xc944e90c64b2c07662a292be6244bdf05cda44a7"): strings.ToLower("0x86cF33a451dE9dc61a2862FD94FF4ad4Bd65A5d2"),
-	// PERP
-	strings.ToLower("0xbc396689893d065f41bc2c6ecbee5e0085233447"): strings.ToLower("0x01cE1210Fe8153500F60f7131d63239373D7E26C"),
 	// USDT
 	strings.ToLower("0xdac17f958d2ee523a2206206994597c13d831ec7"): strings.ToLower("0x3E7d1eAB13ad0104d2750B8863b489D65364e32D"),
 }

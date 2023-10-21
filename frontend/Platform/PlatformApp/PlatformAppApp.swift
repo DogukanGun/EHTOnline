@@ -9,6 +9,7 @@ import SwiftUI
 import OSLog
 
 let logger = Logger()
+let networkManager = NetworkManager()
 
 @main
 struct PlatformAppApp: App {
