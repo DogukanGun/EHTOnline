@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import SwiftUI
 
-class TradeViewModel: ObservableObject {
+@Observable class TradeViewModel {
     let options = [
         TradeOptions(symbol: "WETH", address: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"),
         TradeOptions(symbol: "WBTC", address: "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599"),
@@ -24,15 +25,13 @@ class TradeViewModel: ObservableObject {
         TradeOptions(symbol: "DAI", address: "0x6b175474e89094c44da98b954eedeac495271d0f"),
         TradeOptions(symbol: "USDT", address: "0xdac17f958d2ee523a2206206994597c13d831ec7")
     ]
-    @Published var dexResponses:[DexResponse] = []
-    @Published var selectedOption = ""
+    var dexResponses:[DexResponse] = []
+    var selectedOption = ""
     
     func getDexData(tokenAddress:String) {
         networkManager.get(path: "/dex/" + tokenAddress, opts: nil) { (result:NetworkResponse<[DexResponse]>) in
             if let response = result.data {
-                DispatchQueue.main.async {
-                    self.dexResponses = response
-                }
+                self.dexResponses = response
             }
         }
     }

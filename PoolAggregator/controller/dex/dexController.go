@@ -14,7 +14,9 @@ func Handler() gin.HandlerFunc {
 		var responses []response.UniswapPriceResponse
 		for key, _ := range ChainlinkAggregator.CHAINLINK_ETH_PRICE_FEEDS {
 			res := uniswap.DexOpportunity(token, key)
-			responses = append(responses, res)
+			if res.Price > 0.0 {
+				responses = append(responses, res)
+			}
 		}
 		context.JSON(http.StatusOK, map[string][]response.UniswapPriceResponse{
 			"data": responses,

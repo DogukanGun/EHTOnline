@@ -13,7 +13,7 @@ struct HomeView: View {
             OracleView()
                 .tabItem {
                     HStack {
-                        Image(systemName: "banknote.fill")
+                        Image(systemName: "banknote")
                         Text("Oracle")
                     }
                 }
@@ -21,6 +21,13 @@ struct HomeView: View {
                 .tabItem {
                     HStack {
                         Image(systemName: "dollarsign.arrow.circlepath")
+                        Text("Trade")
+                    }
+                }
+            InvestmentView()
+                .tabItem {
+                    HStack {
+                        Image(systemName: "bitcoinsign.circle")
                         Text("Trade")
                     }
                 }

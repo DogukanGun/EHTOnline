@@ -187,8 +187,8 @@
             filePath = "PlatformApp/Feature/Home/Trade/TradeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "getDexData(tokenAddress:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -203,8 +203,8 @@
             filePath = "PlatformApp/Feature/Home/Trade/TradeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "getDexData(tokenAddress:)"
             landmarkType = "7">
             <Locations>
@@ -244,22 +244,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "994441BE-FEF1-4CEE-A3AE-DE52E2F8F2AA"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PlatformApp/Feature/Home/Trade/TradeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "5A97CC62-C3DE-42B5-ADE4-E74CBCB5D507"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -267,8 +251,8 @@
             filePath = "PlatformApp/Feature/Home/Trade/TradeView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -324,7 +308,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "451FBE01-8ECB-4353-851B-2CFD15608CE4"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlatformApp/Data/NetworkManager.swift"
@@ -339,54 +323,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BEBBA8B1-7271-4DE4-B02F-51B5C52067F9"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PlatformApp/Feature/Home/Trade/TradeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "BEBBA8B1-7271-4DE4-B02F-51B5C52067F9 - 5e53fbf391b8b4a6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (PlatformApp.DexResponse) -&gt; PlatformApp.TradeViewListCell in PlatformApp.TradeView.body.getter : some"
-                  moduleName = "PlatformApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dogukangundogan/Desktop/ethonline/frontend/Platform/PlatformApp/Feature/Home/Trade/TradeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "92">
-               </Location>
-               <Location
-                  uuid = "BEBBA8B1-7271-4DE4-B02F-51B5C52067F9 - 7822d52801451109"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (SwiftUI.Binding&lt;PlatformApp.DexResponse&gt;) -&gt; PlatformApp.TradeViewListCell in PlatformApp.TradeView.body.getter : some"
-                  moduleName = "PlatformApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dogukangundogan/Desktop/ethonline/frontend/Platform/PlatformApp/Feature/Home/Trade/TradeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "180">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "0D67CF2F-96CF-4570-8C91-E2D4C935C688"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -394,8 +330,8 @@
             filePath = "PlatformApp/Feature/Home/Trade/TradeView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -436,19 +372,35 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "36B92C45-7E50-4F65-A8C3-40A10A671FBF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PlatformApp/Feature/Home/Trade/TradeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "getDexData(tokenAddress:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B01258DE-44CA-412A-A1D2-D8F6E3492678"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlatformApp/Feature/Home/Trade/TradeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "getDexData(tokenAddress:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "36B92C45-7E50-4F65-A8C3-40A10A671FBF - e290cc04d47ad336"
+                  uuid = "B01258DE-44CA-412A-A1D2-D8F6E3492678 - e290cc04d47ad336"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -460,10 +412,25 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "34"
                   endingLineNumber = "34"
-                  offsetFromSymbolStart = "144">
+                  offsetFromSymbolStart = "240">
                </Location>
                <Location
-                  uuid = "36B92C45-7E50-4F65-A8C3-40A10A671FBF - e290cc04d47ad374"
+                  uuid = "B01258DE-44CA-412A-A1D2-D8F6E3492678 - c8351f320233a655"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (PlatformApp.NetworkResponse&lt;Swift.Array&lt;PlatformApp.DexResponse&gt;&gt;) -&gt; () in PlatformApp.TradeViewModel.getDexData(tokenAddress: Swift.String) -&gt; ()"
+                  moduleName = "PlatformApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dogukangundogan/Desktop/ethonline/frontend/Platform/PlatformApp/Feature/Home/Trade/TradeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "B01258DE-44CA-412A-A1D2-D8F6E3492678 - e290cc04d47ad336"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -473,9 +440,9 @@
                   urlString = "file:///Users/dogukangundogan/Desktop/ethonline/frontend/Platform/PlatformApp/Feature/Home/Trade/TradeViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "460">
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "120">
                </Location>
             </Locations>
          </BreakpointContent>

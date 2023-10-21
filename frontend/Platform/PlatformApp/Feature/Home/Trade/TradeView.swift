@@ -8,15 +8,19 @@
 import SwiftUI
 
 struct TradeView: View {
-    @ObservedObject var tradeViewModel = TradeViewModel()
+    @State var tradeViewModel = TradeViewModel()
     var body: some View {
-        TradeViewPicker(options: tradeViewModel.options, selectedOption: $tradeViewModel.selectedOption) { token in
-            self.tradeViewModel.getDexData(tokenAddress: token.address)
-            self.tradeViewModel.selectedOption = token.symbol
-        }.padding()
-        List($tradeViewModel.dexResponses, id:\.self) { dex in
-            TradeViewListCell(dexResponse: dex.wrappedValue,selectedCoin: self.tradeViewModel.selectedOption)
+        VStack {
+            TradeViewPicker(options: tradeViewModel.options, selectedOption: $tradeViewModel.selectedOption) { token in
+                self.tradeViewModel.getDexData(tokenAddress: token.address)
+                self.tradeViewModel.selectedOption = token.symbol
+            }
+            .padding()
+            List($tradeViewModel.dexResponses, id:\.self) { dex in
+                TradeViewListCell(dexResponse: dex.wrappedValue,selectedCoin: self.tradeViewModel.selectedOption)
+            }
         }
+        
     }
 }
 
@@ -27,7 +31,7 @@ struct TradeViewPicker: View {
     var onItemClick:(TradeOptions) -> Void
     var body: some View {
         VStack {
-            DisclosureGroup("Select an option", isExpanded: $isDropdownExpanded) {
+            DisclosureGroup(selectedOption == "" ? "Select an option" : selectedOption, isExpanded: $isDropdownExpanded) {
                 ForEach(options, id: \.self) { option in
                     Button {
                         isDropdownExpanded = false
@@ -74,6 +78,6 @@ struct TradeViewListCell: View {
 }
 
 #Preview {
-    TradeViewListCell(dexResponse: DexResponse(poolAssets: "ETH/BTC", poolAddress: "0x1esdqasd", shouldSell: false, price: 1540.2, advantage: 0.3232))
+    TradeViewListCell(dexResponse: DexResponse(poolAssets: "ETH/BTC", poolAddress: "0x1esdqasd", shouldSell: false, price: 1540.2, advantage: 0.3232), selectedCoin: "ETH")
 }
 

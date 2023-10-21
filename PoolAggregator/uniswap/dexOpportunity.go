@@ -13,6 +13,7 @@ func DexOpportunity(token0 string, token1 string) (res response.UniswapPriceResp
 	// Access the first and second arguments.
 	envNames := []string{"ETH_URL"}
 	status, _, envMap := utils.InitializeENV(envNames, "dex.env")
+	res.PoolAssets = oracle.REDSTONE_PRICE_FEEDS[token0] + "/" + oracle.REDSTONE_PRICE_FEEDS[token1]
 	if !status {
 		fmt.Println("Error in env")
 	}

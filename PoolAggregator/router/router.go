@@ -22,7 +22,7 @@ func New() *gin.Engine {
 	}))
 
 	router.GET("/dex/:token", dex.Handler())
-	router.GET("/price/:token", oracleController.Handler())
+	router.GET("/prices", oracleController.Handler())
 
 	gob.Register(map[string]interface{}{})
 

@@ -15,11 +15,11 @@ import (
 )
 
 type PriceOracleResponse struct {
-	Price            float64
-	TokenDecimal     uint8
-	OracleIdentifier string
-	ExtraData        string
-	Error            error
+	Price            float64 `json:"price"`
+	TokenDecimal     uint8   `json:"token_decimal"`
+	OracleIdentifier string  `json:"oracle_identifier"`
+	ExtraData        string  `json:"extra_data"`
+	Error            error   `json:"error"`
 }
 
 func RedStonePriceOracle(tokenAddress string, client *ethclient.Client, channel chan PriceOracleResponse) (response PriceOracleResponse) {
@@ -118,8 +118,8 @@ func ChainlinkETHUSDOracle(tokenAddress string, client *ethclient.Client) (respo
 	response = PriceOracleResponse{
 		Price:            0,
 		TokenDecimal:     0,
-		OracleIdentifier: "chainlinkETH",
-		ExtraData:        "",
+		OracleIdentifier: "Chainlink",
+		ExtraData:        REDSTONE_PRICE_FEEDS[tokenAddress],
 		Error:            nil,
 	}
 
