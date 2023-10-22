@@ -1,6 +1,7 @@
 package yield
 
 import (
+	"PoolAggregator/NetworkListener/yield/pancake"
 	"PoolAggregator/NetworkListener/yield/uniswap"
 	"PoolAggregator/data"
 	"PoolAggregator/utils"
@@ -29,7 +30,9 @@ func StartYieldAggregator() {
 			yields = append(yields, uniswap.GetUniswapYield(key, usdtAddress, client))
 		}
 	} else if chain == "goerli" {
-		//TODO @CemDenizsel add pancake yield calculation here
+		for key, _ := range supportedCoins {
+			yields = append(yields, pancake.GetPancakeYield(key, usdtAddress, client))
+		}
 	}
 	maximumYield := getMaxYield(yields)
 	fmt.Println("Max yield in ", maximumYield.ChainName, " and adrees is ", maximumYield.PoolAddress)
