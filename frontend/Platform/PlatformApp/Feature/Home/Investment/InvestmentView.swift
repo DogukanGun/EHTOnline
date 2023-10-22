@@ -26,6 +26,7 @@ struct InvestmentView: View {
                 TextField(text: $investmentViewModel.amount) {
                     Text("Amount that you want to \(investmentViewModel.selectedInvestmentType.lowercased())")
                         .padding()
+                        .foregroundColor(.black)
                 }
                 .padding()
                 .background(Color.white)
@@ -33,8 +34,11 @@ struct InvestmentView: View {
                 .shadow(radius: 2)
                 .padding()
                 Spacer()
+                if investmentViewModel.transactionStatus != "" {
+                    Text(investmentViewModel.transactionStatus)
+                }
                 Button {
-                    
+                    investmentViewModel.sendTransaction()
                 } label: {
                     Text(investmentViewModel.selectedInvestmentType)
                         .font(.custom("", size: 20))

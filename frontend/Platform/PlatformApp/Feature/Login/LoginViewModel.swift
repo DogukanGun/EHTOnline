@@ -19,17 +19,16 @@ class LoginViewModel: ObservableObject {
     
     
     func login(completion:@escaping() -> Void){
-        /*ethereum.connect(dapp)?.sink(receiveCompletion: { completion in
-         switch completion {
-         case let .failure(error):
-         print("Connection error: \(error)")
-         default: break
-         }
-         }, receiveValue: { result in
-         UserDefaults.standard.setValue(result, forKey: "address")
-         
-         }).store(in: &cancellables)
-         */
+        ethereum.connect(dapp)?.sink(receiveCompletion: { completion in
+            switch completion {
+            case let .failure(error):
+                print("Connection error: \(error)")
+            default: break
+            }
+        }, receiveValue: { result in
+            UserDefaults.standard.setValue(result, forKey: "address")
+            
+        }).store(in: &cancellables)
         completion()
     }
 }
