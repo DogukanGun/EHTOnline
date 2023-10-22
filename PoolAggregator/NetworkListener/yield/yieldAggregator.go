@@ -1,4 +1,4 @@
-package yield
+package main
 
 import (
 	"PoolAggregator/NetworkListener/yield/pancake"
@@ -11,12 +11,12 @@ import (
 	"strings"
 )
 
-func StartYieldAggregator() {
+func main() {
 	//TODO Send contracts a request to get is there a stake there
 	//If stake is in chain a then check chain b on opposite situation check chain b
 	//Get current stake
 	envNames := []string{"ETH_URL"}
-	status, _, envMap := utils.InitializeENV(envNames, ".env")
+	status, _, envMap := utils.InitializeENV(envNames, "dex.env")
 	if !status {
 		fmt.Println("Error in env")
 		os.Exit(1)
