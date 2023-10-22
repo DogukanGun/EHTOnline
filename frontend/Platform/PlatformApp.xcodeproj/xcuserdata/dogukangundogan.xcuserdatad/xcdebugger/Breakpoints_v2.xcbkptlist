@@ -388,7 +388,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B01258DE-44CA-412A-A1D2-D8F6E3492678"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlatformApp/Feature/Home/Trade/TradeViewModel.swift"

@@ -13,6 +13,7 @@
 		9E169DD92AE4695B00EBDBBD /* OracleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E169DD82AE4695B00EBDBBD /* OracleResponse.swift */; };
 		9E169DDB2AE46A7C00EBDBBD /* OracleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E169DDA2AE46A7C00EBDBBD /* OracleViewModel.swift */; };
 		9E169DDD2AE46D5100EBDBBD /* InvestmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E169DDC2AE46D5100EBDBBD /* InvestmentView.swift */; };
+		9E169DDF2AE5261F00EBDBBD /* InvestmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E169DDE2AE5261F00EBDBBD /* InvestmentViewModel.swift */; };
 		9E51F4542AE17AD300D84901 /* metamask-ios-sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 9E51F4532AE17AD300D84901 /* metamask-ios-sdk */; };
 		9E51F4562AE17BBB00D84901 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 9E51F4552AE17BBB00D84901 /* Lottie */; };
 		9E51F4592AE1A54700D84901 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E51F4582AE1A54700D84901 /* HomeView.swift */; };
@@ -40,6 +41,7 @@
 		9E169DD82AE4695B00EBDBBD /* OracleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OracleResponse.swift; sourceTree = "<group>"; };
 		9E169DDA2AE46A7C00EBDBBD /* OracleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OracleViewModel.swift; sourceTree = "<group>"; };
 		9E169DDC2AE46D5100EBDBBD /* InvestmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentView.swift; sourceTree = "<group>"; };
+		9E169DDE2AE5261F00EBDBBD /* InvestmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentViewModel.swift; sourceTree = "<group>"; };
 		9E51F4582AE1A54700D84901 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9E51F45C2AE1C50300D84901 /* TradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeView.swift; sourceTree = "<group>"; };
 		9E51F45F2AE1C8F300D84901 /* OracleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OracleView.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				9E169DDC2AE46D5100EBDBBD /* InvestmentView.swift */,
+				9E169DDE2AE5261F00EBDBBD /* InvestmentViewModel.swift */,
 			);
 			path = Investment;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				9EAB4E7D2AE08496008A587D /* Persistence.swift in Sources */,
 				9E51F4602AE1C8F300D84901 /* OracleView.swift in Sources */,
 				9E169DDD2AE46D5100EBDBBD /* InvestmentView.swift in Sources */,
+				9E169DDF2AE5261F00EBDBBD /* InvestmentViewModel.swift in Sources */,
 				9EAB4E802AE08496008A587D /* PlatformApp.xcdatamodeld in Sources */,
 				9EAB4EA32AE08B6D008A587D /* LottieView.swift in Sources */,
 			);
